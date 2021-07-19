@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+.container {
+    padding: 4px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.app {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100%;
+  position: relative;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sentMessageContainer {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 8px;
 }
+
+.formContainer {
+    border-top: 3px solid #ced4da
+}
+
+.md-form {
+    margin-top: 1rem !important;
+    color: "white" !important;
+}
+
+.sentMessage {
+    text-align: left;
+    padding: 8px;
+    font-family: "roboto";
+    color: #fff;
+    background: linear-gradient(243deg, #2397f5, #498efc 100%);
+    border-radius: 8px;
+}
+
+.sentMessage p, .receivedMessage p, .senderText {
+    margin-bottom: 0;
+}
+
+.receivedMessageContainer {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 8px;
+}
+
+.receivedMessage {
+    text-align: left;
+    padding: 8px;
+    font-family: "roboto";
+    color: #fff;
+    background: linear-gradient(
+        193deg,
+        rgb(156, 78, 14) 0%,
+        rgb(138, 80, 80) 100%
+    );
+    border-radius: 8px;
+}
+
+.senderText {
+    font-family: "roboto";
+    font-size: 14px;
+    color: rgba(214, 214, 214, 0.7);
+}
+
+.chatbox {
+    background-color: #3a4353;
+    min-width: 100%;
+    height: 80vh;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  input {
+      color: #fff !important
+  }
+
+@media only screen and (max-width: 600px) {
+    .chatbox {
+        height: 60vh
+    }
+}
+  
